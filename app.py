@@ -32,12 +32,17 @@ def get_sub_urls(url):
     return sub_urls
 
 def extract_text(url):
-    response = requests.get(url)
-    if response.status_code == 200:
-        soup = BeautifulSoup(response.content, "html.parser")
-        return soup.get_text()
-    else:
+    try:
+        response = requests.get(url, max_redirects=10)  # Augmenter la limite de redirections
+        if response.status_code == 200:
+            soup = BeautifulSoup(response.content, "html.parser")
+            return soup.get_text()
+        else:
+            return None
+    except requests.exceptions.TooManyRedirects:
+        st.write(f"Trop de redirections lors de la tentative d'accès à l'URL : {url}")
         return None
+
 
 def main():
     url = st.text_input("Veuillez entrer l'URL : ")

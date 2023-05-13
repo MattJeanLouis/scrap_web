@@ -1,0 +1,6 @@
+streamlit
+requests
+beautifulsoup4
+readability-lxml
+protobuf==3.20.0
+pyperclip

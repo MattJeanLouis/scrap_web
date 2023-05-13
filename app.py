@@ -82,9 +82,6 @@ def main():
         with st.expander("Tout le contenu"):  # Afficher tout le contenu dans un volet déroulant
             all_content_str = "\n".join(all_content)
             st.write(all_content_str)
-            if st.button('            Copier tout le contenu'):
-                pyperclip.copy(all_content_str)
-                st.success('Contenu copié dans le presse-papiers !')
 
 if __name__ == "__main__":
     main()

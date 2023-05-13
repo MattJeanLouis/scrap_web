@@ -10,14 +10,6 @@ REQUIRED_PACKAGES = [
     'protobuf==3.20.0'
 ]
 
-for package in REQUIRED_PACKAGES:
-    try:
-        dist = pkg_resources.get_distribution(package)
-        print('{} ({}) is installed'.format(dist.key, dist.version))
-    except pkg_resources.DistributionNotFound:
-        print('{} is NOT installed'.format(package))
-        os.system('pip install ' + package)
-
 os.environ['PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION'] = 'python'
 
 

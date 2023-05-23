@@ -1,14 +1,14 @@
 # Web Scraper avec Streamlit
 
-Ce projet est un web scraper construit avec Streamlit, une bibliothèque Python pour créer des applications web rapidement. Il permet d'extraire le texte de n'importe quelle page web et de ses sous-pages.
+Ce projet est un web scraper construit avec Streamlit, une bibliothèque Python pour créer des applications web rapidement. Il permet d'extraire le texte de n'importe quelle page web et de ses sous-pages, puis de convertir le contenu HTML en Markdown pour un affichage facile à lire.
 
 ## Fonctionnalités
 
 - Extraction du texte de n'importe quelle page web et de ses sous-pages.
-- Affichage du texte extrait dans un format facile à lire.
-- Affichage d'un sommaire des URL visitées.
-- Affichage de tout le contenu extrait dans un volet déroulant.
-- Option pour copier tout le contenu extrait dans le presse-papiers.
+- Conversion du contenu HTML en Markdown pour un affichage facile à lire.
+- Exploration récursive des sous-pages d'une URL donnée.
+- Affichage du contenu Markdown extrait dans un format lisible.
+- Affichage d'un sommaire des URL visitées dans un volet déroulant.
 
 ## Installation
 
@@ -19,17 +19,17 @@ Ce projet est un web scraper construit avec Streamlit, une bibliothèque Python 
 ## Utilisation
 
 1. Entrez l'URL de la page web dont vous voulez extraire le texte dans le champ de saisie.
-2. L'application extrait le texte de l'URL principale et de toutes ses sous-URLs.
-3. Le texte extrait est affiché dans un format facile à lire.
+2. L'application extrait le texte de l'URL principale et de toutes ses sous-URLs, et convertit le contenu HTML en Markdown.
+3. Le contenu Markdown extrait est affiché dans un format facile à lire.
 4. Un sommaire des URL visitées est affiché dans un volet déroulant.
-5. Tout le contenu extrait est affiché dans un volet déroulant. Vous pouvez copier ce contenu dans votre presse-papiers en cliquant sur le bouton "Copier tout le contenu".
+5. Tout le contenu extrait est affiché dans un volet déroulant.
 
 ## Dépendances
 
 - streamlit
 - requests
 - beautifulsoup4
-- pyperclip
+- html2text
 
 ## Auteur
 

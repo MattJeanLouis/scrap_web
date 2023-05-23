@@ -4,3 +4,5 @@ beautifulsoup4
 readability-lxml
 protobuf==3.20.0
 pyperclip
+html2text==2020.1.16
+urllib3==1.26.7
